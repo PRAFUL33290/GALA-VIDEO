@@ -491,11 +491,21 @@ body {
   animation: floatIn 0.7s ease both;
 }
 
-/* Côté droit — reste centré */
+/* Côté gauche — Emma */
+.dialogue.left {
+  align-self: flex-start;
+  align-items: flex-start;
+}
+
+/* Côté droit — autres personnages */
 .dialogue.right {
-  align-self: center;
-  align-items: center;
+  align-self: flex-end;
+  align-items: flex-end;
   animation-name: floatInRight;
+}
+
+.dialogue.right .dialogue-speaker {
+  text-align: right;
 }
 
 /* Délais d'apparition pour les dialogues */
@@ -547,18 +557,18 @@ body {
 
 /* Bollywood — Élina, Nina */
 .dialogue.elina .dialogue-speaker  { color: var(--color-bollywood); }
-.dialogue.elina .dialogue-bubble   { background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.25); border-bottom-left-radius: 4px; }
+.dialogue.elina .dialogue-bubble   { background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.25); border-bottom-right-radius: 4px; }
 
 .dialogue.nina .dialogue-speaker   { color: #fbbf24; }
-.dialogue.nina .dialogue-bubble    { background: rgba(251,191,36,0.1); border: 1px solid rgba(251,191,36,0.25); border-bottom-left-radius: 4px; }
+.dialogue.nina .dialogue-bubble    { background: rgba(251,191,36,0.1); border: 1px solid rgba(251,191,36,0.25); border-bottom-right-radius: 4px; }
 
 /* Street — Jade */
 .dialogue.jade .dialogue-speaker   { color: #a78bfa; }
-.dialogue.jade .dialogue-bubble    { background: rgba(167,139,250,0.1); border: 1px solid rgba(167,139,250,0.25); border-bottom-left-radius: 4px; }
+.dialogue.jade .dialogue-bubble    { background: rgba(167,139,250,0.1); border: 1px solid rgba(167,139,250,0.25); border-bottom-right-radius: 4px; }
 
 /* Jazz — Ambre */
 .dialogue.ambre .dialogue-speaker  { color: var(--color-jazz); }
-.dialogue.ambre .dialogue-bubble   { background: rgba(52,211,153,0.1); border: 1px solid rgba(52,211,153,0.25); border-bottom-left-radius: 4px; }
+.dialogue.ambre .dialogue-bubble   { background: rgba(52,211,153,0.1); border: 1px solid rgba(52,211,153,0.25); border-bottom-right-radius: 4px; }
 
 .dialogue.stage { justify-content: center; }
 .dialogue.stage .dialogue-bubble,
@@ -923,6 +933,12 @@ body {
   .dialogue.right,
   .dialogue.left {
     max-width: 96%;
+    align-self: center;
+    align-items: center;
+  }
+
+  .dialogue.right .dialogue-speaker {
+    text-align: center;
   }
 
   .dialogue-bubble {
