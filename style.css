@@ -510,6 +510,200 @@ body {
 }
 
 /* ===========================
+   CE QU'EMMA APPREND
+   =========================== */
+
+.emma-learns {
+  margin-top: 2.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: var(--radius-card);
+  padding: 1.75rem 2rem;
+  box-shadow: var(--shadow-soft);
+  animation: fadeInUp 0.9s 1.3s ease both;
+}
+
+.emma-learns-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1.25rem;
+}
+
+.emma-learns-icon {
+  font-size: 1.2rem;
+}
+
+.emma-learns-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.emma-learns-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+@media (max-width: 640px) {
+  .emma-learns-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.emma-learns-col-title {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: 0.6rem;
+}
+
+.emma-learns-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.emma-learns-list li {
+  font-size: 0.9rem;
+  color: var(--color-text);
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.emma-learns-list li::before {
+  content: '•';
+  flex-shrink: 0;
+  font-size: 0.8rem;
+  margin-top: 0.15rem;
+}
+
+.emma-learns-transformation {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  padding-top: 1rem;
+}
+
+.emma-learns-transformation strong {
+  color: var(--color-text);
+}
+
+.emma-learns-summary {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-style: italic;
+  margin-top: 0.5rem;
+  padding: 0.3rem 0.9rem;
+  border-radius: 100px;
+}
+
+/* Bollywood — orange/doré */
+.bollywood-section .emma-learns {
+  border: 1px solid rgba(245, 158, 11, 0.25);
+}
+.bollywood-section .emma-learns-title { color: var(--color-bollywood); }
+.bollywood-section .emma-learns-list li::before { color: var(--color-bollywood); }
+.bollywood-section .emma-learns-summary {
+  background: rgba(245, 158, 11, 0.1);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  color: #fbbf24;
+}
+
+/* Street — indigo */
+.street-section .emma-learns {
+  border: 1px solid rgba(129, 140, 248, 0.25);
+}
+.street-section .emma-learns-title { color: var(--color-street); }
+.street-section .emma-learns-list li::before { color: var(--color-street); }
+.street-section .emma-learns-summary {
+  background: rgba(129, 140, 248, 0.1);
+  border: 1px solid rgba(129, 140, 248, 0.3);
+  color: #a78bfa;
+}
+
+/* Jazz — vert émeraude */
+.jazz-section .emma-learns {
+  border: 1px solid rgba(52, 211, 153, 0.25);
+}
+.jazz-section .emma-learns-title { color: var(--color-jazz); }
+.jazz-section .emma-learns-list li::before { color: var(--color-jazz); }
+.jazz-section .emma-learns-summary {
+  background: rgba(52, 211, 153, 0.1);
+  border: 1px solid rgba(52, 211, 153, 0.3);
+  color: #6ee7b7;
+}
+
+/* ===========================
+   TRANSFORMATION FINALE
+   =========================== */
+
+.finale-transformation {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin: 2rem auto 1.5rem;
+  max-width: 520px;
+}
+
+.finale-transformation-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: var(--radius-card);
+  padding: 0.8rem 1.5rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.finale-transformation-item .ftag {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.7rem;
+  border-radius: 100px;
+}
+
+.ftag--bollywood {
+  background: rgba(245, 158, 11, 0.15);
+  color: var(--color-bollywood);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+.ftag--street {
+  background: rgba(129, 140, 248, 0.15);
+  color: var(--color-street);
+  border: 1px solid rgba(129, 140, 248, 0.3);
+}
+.ftag--jazz {
+  background: rgba(52, 211, 153, 0.15);
+  color: var(--color-jazz);
+  border: 1px solid rgba(52, 211, 153, 0.3);
+}
+
+.finale-aligned {
+  margin: 0 auto 2rem;
+  max-width: 540px;
+  font-size: 0.95rem;
+  background: rgba(249, 168, 212, 0.07);
+  border: 1px solid rgba(249, 168, 212, 0.2);
+  border-radius: var(--radius-card);
+  padding: 1.2rem 1.8rem;
+  color: var(--color-text);
+  font-style: italic;
+  line-height: 1.8;
+}
+
+/* ===========================
    SECTION FINALE
    =========================== */
 
