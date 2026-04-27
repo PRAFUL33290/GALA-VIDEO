@@ -13,22 +13,23 @@
 }
 
 :root {
-  --color-bg-start:    #0d0821;
-  --color-bg-mid:      #1a0a3c;
-  --color-bg-end:      #2d1250;
-  --color-accent:      #c084fc;
-  --color-glow:        #a855f7;
+  --color-bg-start:    #010c1c;
+  --color-bg-mid:      #041828;
+  --color-bg-end:      #072240;
+  --color-accent:      #f5c542;      /* or/bokeh */
+  --color-glow:        #e0a020;      /* or profond */
+  --color-soft-gold:   #fde68a;      /* or doux */
   --color-soft-rose:   #f9a8d4;
-  --color-night-blue:  #1e3a5f;
-  --color-text:        #e9d5ff;
-  --color-text-muted:  #a78bca;
+  --color-night-blue:  #1e4a7a;
+  --color-text:        #e8f4ff;
+  --color-text-muted:  #8ab4d4;
   --color-emma:        #f472b6;      /* rose vif — Emma */
   --color-bollywood:   #f59e0b;      /* orange/doré */
-  --color-street:      #818cf8;      /* violet/bleu */
+  --color-street:      #818cf8;      /* indigo/bleu nuit */
   --color-jazz:        #34d399;      /* vert émeraude doux */
   --radius-card:       1.25rem;
-  --shadow-glow:       0 0 24px rgba(168, 85, 247, 0.35);
-  --shadow-soft:       0 4px 32px rgba(0, 0, 0, 0.45);
+  --shadow-glow:       0 0 24px rgba(200, 150, 20, 0.4);
+  --shadow-soft:       0 4px 32px rgba(0, 0, 0, 0.55);
   --transition:        0.5s ease;
   --max-width:         860px;
 }
@@ -62,8 +63,8 @@ body {
 }
 
 @keyframes glowPulse {
-  0%, 100% { text-shadow: 0 0 18px rgba(192, 132, 252, 0.6); }
-  50%       { text-shadow: 0 0 36px rgba(249, 168, 212, 0.9), 0 0 60px rgba(168, 85, 247, 0.5); }
+  0%, 100% { text-shadow: 0 0 18px rgba(245, 197, 66, 0.6); }
+  50%       { text-shadow: 0 0 36px rgba(253, 230, 138, 0.9), 0 0 60px rgba(200, 150, 20, 0.5); }
 }
 
 @keyframes floatIn {
@@ -113,7 +114,7 @@ body {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse 80% 60% at 50% 40%, rgba(168,85,247,0.18) 0%, transparent 70%);
+  background: radial-gradient(ellipse 80% 60% at 50% 40%, rgba(59,100,220,0.15) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -130,9 +131,9 @@ body {
   font-weight: 600;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: var(--color-soft-rose);
-  background: rgba(249, 168, 212, 0.1);
-  border: 1px solid rgba(249, 168, 212, 0.3);
+  color: var(--color-soft-gold);
+  background: rgba(245, 197, 66, 0.1);
+  border: 1px solid rgba(245, 197, 66, 0.3);
   padding: 0.35rem 1.1rem;
   border-radius: 100px;
   margin-bottom: 1.5rem;
@@ -143,7 +144,7 @@ body {
   font-size: clamp(3rem, 8vw, 6.5rem);
   font-weight: 700;
   letter-spacing: -0.02em;
-  background: linear-gradient(135deg, #f9a8d4, #c084fc, #818cf8);
+  background: linear-gradient(135deg, #ffffff, #fde68a, #93c5fd);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -213,7 +214,7 @@ body {
   display: block;
   width: 100%;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(168,85,247,0.4), transparent);
+  background: linear-gradient(90deg, transparent, rgba(200,150,20,0.45), transparent);
   margin: 0 auto;
   max-width: 700px;
 }
@@ -223,7 +224,7 @@ body {
    =========================== */
 
 .concept-section .section-title { color: var(--color-accent); }
-.concept-section .section-underline { background: linear-gradient(90deg, var(--color-accent), var(--color-soft-rose)); }
+.concept-section .section-underline { background: linear-gradient(90deg, var(--color-accent), var(--color-soft-gold)); }
 
 .concept-intro {
   font-size: 1rem;
@@ -232,7 +233,7 @@ body {
   border-left: 3px solid var(--color-accent);
   padding: 0.8rem 1.4rem;
   margin-bottom: 2.5rem;
-  background: rgba(192, 132, 252, 0.06);
+  background: rgba(200, 150, 20, 0.06);
   border-radius: 0 var(--radius-card) var(--radius-card) 0;
   line-height: 1.8;
 }
@@ -245,7 +246,7 @@ body {
 
 .concept-card {
   background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(192, 132, 252, 0.2);
+  border: 1px solid rgba(200, 150, 20, 0.2);
   border-radius: var(--radius-card);
   padding: 1.75rem 2rem;
   box-shadow: var(--shadow-soft);
@@ -258,8 +259,8 @@ body {
 }
 
 .concept-card--final {
-  background: rgba(192, 132, 252, 0.08);
-  border-color: rgba(192, 132, 252, 0.35);
+  background: rgba(200, 150, 20, 0.06);
+  border-color: rgba(200, 150, 20, 0.3);
   text-align: center;
 }
 
@@ -286,7 +287,7 @@ body {
   font-family: 'Playfair Display', serif;
   font-size: clamp(1.1rem, 3vw, 1.4rem);
   font-style: italic;
-  background: linear-gradient(135deg, #f9a8d4, #c084fc, #818cf8);
+  background: linear-gradient(135deg, #ffffff, #fde68a, #93c5fd);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -321,8 +322,8 @@ body {
   justify-content: center;
   min-width: 1.6rem;
   height: 1.6rem;
-  background: rgba(192, 132, 252, 0.18);
-  border: 1px solid rgba(192, 132, 252, 0.4);
+  background: rgba(200, 150, 20, 0.18);
+  border: 1px solid rgba(200, 150, 20, 0.4);
   border-radius: 50%;
   font-size: 0.72rem;
   font-weight: 700;
@@ -484,16 +485,16 @@ body {
 .dialogue.ambre .dialogue-bubble   { background: rgba(52,211,153,0.1); border: 1px solid rgba(52,211,153,0.25); border-bottom-left-radius: 4px; }
 
 /* Voix off / Narrateur */
-.dialogue.voixoff {
+.dialogue.video {
   max-width: 100%;
   align-self: center;
   align-items: center;
   text-align: center;
 }
-.dialogue.voixoff .dialogue-speaker { color: var(--color-text-muted); letter-spacing: 0.25em; }
-.dialogue.voixoff .dialogue-bubble {
-  background: rgba(255,255,255,0.04);
-  border: 1px dashed rgba(255,255,255,0.15);
+.dialogue.video .dialogue-speaker { color: #60a5fa; letter-spacing: 0.25em; }
+.dialogue.video .dialogue-bubble {
+  background: rgba(4, 24, 50, 0.7);
+  border: 1px solid rgba(96, 165, 250, 0.25);
   font-style: italic;
   color: var(--color-text-muted);
 }
@@ -524,7 +525,7 @@ body {
 }
 
 .finale-message strong {
-  background: linear-gradient(135deg, #f9a8d4, #c084fc, #818cf8);
+  background: linear-gradient(135deg, #ffffff, #fde68a, #93c5fd);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -554,7 +555,21 @@ body {
   padding: 2rem;
   font-size: 0.8rem;
   color: var(--color-text-muted);
-  border-top: 1px solid rgba(168,85,247,0.15);
+  border-top: 1px solid rgba(200,150,20,0.2);
+}
+
+/* ===========================
+   AFFICHE
+   =========================== */
+
+.header-poster {
+  display: block;
+  width: min(300px, 80vw);
+  margin: 2rem auto;
+  border-radius: 1rem;
+  border: 1px solid rgba(200, 150, 20, 0.35);
+  box-shadow: 0 0 50px rgba(59, 100, 200, 0.3), 0 8px 48px rgba(0, 0, 0, 0.7);
+  object-fit: cover;
 }
 
 /* ===========================
