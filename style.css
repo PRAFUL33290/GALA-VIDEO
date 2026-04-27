@@ -203,7 +203,16 @@ body {
   width: 60px;
   height: 3px;
   border-radius: 2px;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.scene-participants {
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--color-text-muted);
+  margin-bottom: 2rem;
+  padding: 0.3rem 0;
 }
 
 /* ===========================
@@ -236,6 +245,47 @@ body {
   background: rgba(200, 150, 20, 0.06);
   border-radius: 0 var(--radius-card) var(--radius-card) 0;
   line-height: 1.8;
+}
+
+/* ===========================
+   STORY CONCEPTION
+   =========================== */
+
+.concept-story {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  margin-bottom: 2rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-left: 3px solid var(--color-accent);
+  border-radius: 0 var(--radius-card) var(--radius-card) 0;
+  padding: 1.75rem 2rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.concept-story p {
+  font-size: 0.97rem;
+  color: var(--color-text);
+  line-height: 1.85;
+}
+
+.concept-final-message {
+  background: rgba(200, 150, 20, 0.06);
+  border: 1px solid rgba(200, 150, 20, 0.3);
+  border-radius: var(--radius-card);
+  padding: 1.5rem 2rem;
+  text-align: center;
+  box-shadow: var(--shadow-soft);
+}
+
+.concept-final-label {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: 0.75rem;
 }
 
 .concept-cards {
@@ -348,6 +398,19 @@ body {
   text-align: center;
 }
 
+.note-highlight {
+  display: inline-block;
+  background: #ffffff;
+  color: #000000 !important;
+  opacity: 1 !important;
+  padding: 0.45rem 1.1rem;
+  border-radius: 6px;
+  font-style: normal;
+  font-weight: 500;
+  width: auto;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+}
+
 /* === PRELUDE QUOTE BLOCK === */
 .prelude-quote {
   position: relative;
@@ -423,13 +486,15 @@ body {
   display: flex;
   flex-direction: column;
   max-width: 78%;
+  align-self: center;
+  align-items: center;
   animation: floatIn 0.7s ease both;
 }
 
-/* Côté droit */
+/* Côté droit — reste centré */
 .dialogue.right {
-  align-self: flex-end;
-  align-items: flex-end;
+  align-self: center;
+  align-items: center;
   animation-name: floatInRight;
 }
 
@@ -454,6 +519,7 @@ body {
   text-transform: uppercase;
   margin-bottom: 0.35rem;
   padding: 0 0.6rem;
+  text-align: center;
 }
 
 .dialogue-bubble {
@@ -760,11 +826,14 @@ body {
 
 .finale-stars {
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
   gap: 0.6rem;
   margin-top: 2rem;
   font-size: 1.1rem;
   opacity: 0.6;
+  flex-wrap: nowrap;
 }
 
 /* ===========================
@@ -785,12 +854,13 @@ body {
 
 .header-poster {
   display: block;
-  width: min(300px, 80vw);
+  width: min(640px, 90vw);
   margin: 2rem auto;
   border-radius: 1rem;
   border: 1px solid rgba(200, 150, 20, 0.35);
   box-shadow: 0 0 50px rgba(59, 100, 200, 0.3), 0 8px 48px rgba(0, 0, 0, 0.7);
   object-fit: cover;
+  pointer-events: none;
 }
 
 /* ===========================
@@ -798,27 +868,87 @@ body {
    =========================== */
 
 @media (max-width: 640px) {
-  .dialogue {
-    max-width: 92%;
-  }
-
-  .prelude-quote {
-    padding: 1.5rem 1.5rem 1.5rem 1.8rem;
-  }
-
+  /* --- Layout global --- */
   .site-header {
-    padding: 3rem 1.5rem;
+    padding: 3rem 1.25rem;
+    text-align: center;
   }
 
   .section {
-    padding: 3.5rem 1.25rem;
+    padding: 3rem 1.25rem;
+    text-align: center;
   }
 
   .finale-section {
     padding: 4rem 1.25rem 5rem;
   }
 
+  /* --- Titres & labels --- */
+  .section-label,
+  .section-title,
+  .section-underline,
+  .scene-participants {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .section-underline {
+    display: block;
+  }
+
+  /* --- Concept story --- */
+  .concept-story {
+    text-align: left;
+  }
+
+  .concept-final-message {
+    text-align: center;
+  }
+
   .concept-card {
     padding: 1.25rem;
+    text-align: left;
+  }
+
+  /* --- Note highlight --- */
+  .note-highlight {
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+
+  /* --- Dialogues --- */
+  .dialogue,
+  .dialogue.right,
+  .dialogue.left {
+    max-width: 96%;
+  }
+
+  .dialogue-bubble {
+    text-align: left;
+  }
+
+  /* --- Emma apprend --- */
+  .emma-learns {
+    text-align: center;
+  }
+
+  .emma-learns-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .emma-learns-list {
+    align-items: center;
+  }
+
+  .emma-learns-list li {
+    justify-content: center;
+  }
+
+  /* --- Finale --- */
+  .prelude-quote {
+    padding: 1.5rem 1.25rem;
   }
 }
