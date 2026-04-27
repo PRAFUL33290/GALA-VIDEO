@@ -215,6 +215,17 @@ body {
   padding: 0.3rem 0;
 }
 
+.scene-number {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.65em;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  color: var(--color-text-muted);
+  vertical-align: middle;
+  margin-left: 0.6em;
+  opacity: 0.75;
+}
+
 /* ===========================
    SÉPARATEUR DE SECTION
    =========================== */
