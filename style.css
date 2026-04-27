@@ -494,6 +494,23 @@ body {
 .dialogue.ambre .dialogue-speaker  { color: var(--color-jazz); }
 .dialogue.ambre .dialogue-bubble   { background: rgba(52,211,153,0.1); border: 1px solid rgba(52,211,153,0.25); border-bottom-left-radius: 4px; }
 
+.dialogue.stage { justify-content: center; }
+.dialogue.stage .dialogue-bubble,
+.stage-direction {
+  background: transparent;
+  border: none;
+  color: var(--color-text-muted);
+  font-style: italic;
+  font-size: 0.88rem;
+  text-align: center;
+  padding: 0.25rem 1rem;
+  box-shadow: none;
+}
+
+.dialogue.tous { justify-content: center; }
+.dialogue.tous .dialogue-speaker { color: var(--color-soft-gold); text-align: center; width: 100%; }
+.dialogue.tous .dialogue-bubble  { background: rgba(253,230,138,0.08); border: 1px solid rgba(253,230,138,0.3); text-align: center; font-style: italic; letter-spacing: 0.02em; }
+
 /* Voix off / Narrateur */
 .dialogue.video {
   max-width: 100%;
