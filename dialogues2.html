@@ -112,6 +112,87 @@
       border-radius: 100px;
       margin-bottom: 1rem;
     }
+
+    /* Changements v2 */
+    .changes-block {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 4rem 2rem 2rem;
+    }
+
+    .changes-intro {
+      background: rgba(255,255,255,0.03);
+      border-left: 3px solid #93c5fd;
+      border-radius: 0 var(--radius-card) var(--radius-card) 0;
+      padding: 1.5rem 2rem;
+      margin-bottom: 1.5rem;
+      font-size: 0.97rem;
+      color: var(--color-text);
+      line-height: 1.85;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .changes-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    @media (max-width: 640px) {
+      .changes-grid { grid-template-columns: 1fr; }
+    }
+
+    .change-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(147,197,253,0.15);
+      border-radius: var(--radius-card);
+      padding: 1.25rem 1.5rem;
+      box-shadow: var(--shadow-soft);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .change-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 20px rgba(147,197,253,0.15), var(--shadow-soft);
+    }
+
+    .change-card-icon {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .change-card-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #93c5fd;
+      margin-bottom: 0.5rem;
+    }
+
+    .change-card-text {
+      font-size: 0.9rem;
+      color: var(--color-text);
+      line-height: 1.75;
+    }
+
+    .change-card-text strong {
+      color: var(--color-soft-gold);
+    }
+
+    .changes-conclusion {
+      background: rgba(147,197,253,0.04);
+      border: 1px solid rgba(147,197,253,0.2);
+      border-radius: var(--radius-card);
+      padding: 1.5rem 2rem;
+      font-size: 0.95rem;
+      color: var(--color-text);
+      line-height: 1.85;
+      text-align: center;
+      font-style: italic;
+    }
   </style>
 </head>
 <body>
@@ -132,6 +213,61 @@
       <hr class="header-divider" />
     </div>
   </header>
+
+  <span class="section-separator"></span>
+
+  <!-- ==============================
+       CHANGEMENTS PAR RAPPORT À LA V1
+       ============================== -->
+  <div class="changes-block">
+    <section class="section concept-section" style="padding-top:0;padding-bottom:0;">
+      <span class="section-label">Évolution du projet</span>
+      <h2 class="section-title">Changements par rapport à la v1</h2>
+      <span class="section-underline"></span>
+    </section>
+
+    <div class="changes-intro fade-in">
+      La principale modification concerne la <strong>structure</strong>. L'introduction (prélude) a été supprimée en début de spectacle, car elle faisait doublon avec la mise en scène déjà prévue autour du sommeil et du réveil. L'histoire a ensuite été repositionnée non plus sur l'ensemble du gala, mais comme un <strong>fil conducteur de la deuxième partie</strong>, pour respecter l'organisation déjà en place tout en apportant une cohérence narrative là où il n'y en avait pas encore.
+    </div>
+
+    <div class="changes-grid">
+
+      <div class="change-card fade-in">
+        <div class="change-card-icon">🗂️</div>
+        <p class="change-card-title">Structure</p>
+        <p class="change-card-text">Le prélude a été <strong>supprimé</strong> pour éviter le doublon avec la mise en scène du sommeil. L'histoire devient le fil conducteur de la <strong>Partie 2</strong> uniquement.</p>
+      </div>
+
+      <div class="change-card fade-in">
+        <div class="change-card-icon">💃</div>
+        <p class="change-card-title">Scènes</p>
+        <p class="change-card-text">Le <strong>Bollywood</strong> reste la première rencontre. Les parties <strong>Street et Modern Jazz</strong> ont été fusionnées en une seule séquence pour alléger le rythme.</p>
+      </div>
+
+      <div class="change-card fade-in">
+        <div class="change-card-icon">💬</div>
+        <p class="change-card-title">Langage</p>
+        <p class="change-card-text">Les textes ont été <strong>retravaillés</strong> pour être plus adaptés aux enfants — phrases plus courtes, plus naturelles, tout en gardant le sens et les émotions.</p>
+      </div>
+
+      <div class="change-card fade-in">
+        <div class="change-card-icon">✂️</div>
+        <p class="change-card-title">Dialogues</p>
+        <p class="change-card-text">Les dialogues ont été <strong>allégés</strong> pour quelque chose de plus vivant et plus fluide sur scène, plutôt que des explications longues et descriptives.</p>
+      </div>
+
+      <div class="change-card fade-in" style="grid-column: 1 / -1;">
+        <div class="change-card-icon">🎬</div>
+        <p class="change-card-title">Visages des enfants</p>
+        <p class="change-card-text">Le choix a été fait de <strong>ne pas afficher les visages des enfants à l'écran</strong>. Cela permet de garder une approche plus universelle, plus esthétique, et plus cohérente avec l'intention globale du projet.</p>
+      </div>
+
+    </div>
+
+    <div class="changes-conclusion fade-in">
+      L'objectif de ces ajustements est de conserver l'essence du projet — le parcours d'Emma à travers les émotions, la confiance et la compréhension d'elle-même — tout en assurant une meilleure cohérence avec le spectacle global et une meilleure compréhension pour le public.
+    </div>
+  </div>
 
   <span class="section-separator"></span>
 
