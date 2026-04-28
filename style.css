@@ -1244,9 +1244,13 @@ body {
 
   .reves-note-list {
     align-items: flex-start;
+    align-self: flex-start;
     text-align: left;
     width: 100%;
-    padding-left: 1rem;
+  }
+
+  .reves-note-list li {
+    text-align: left;
   }
 
   /* --- Proposition (update note) --- */
