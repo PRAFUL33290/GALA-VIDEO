@@ -1219,10 +1219,6 @@ body {
   }
 
   /* --- Note rêves personnels / universels --- */
-  .reves-note {
-    text-align: center;
-  }
-
   .reves-note-header {
     flex-direction: column;
     align-items: center;
@@ -1234,19 +1230,24 @@ body {
   }
 
   .reves-note-col {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    text-align: center;
+  }
+
+  .reves-tag {
+    margin: 0 auto;
   }
 
   .reves-note-col p {
+    width: 100%;
     text-align: left;
   }
 
   .reves-note-list {
-    align-items: flex-start;
-    align-self: flex-start;
-    text-align: left;
     width: 100%;
+    align-items: flex-start;
+    align-self: stretch;
   }
 
   .reves-note-list li {
