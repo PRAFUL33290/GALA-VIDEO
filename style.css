@@ -1217,4 +1217,50 @@ body {
   .prelude-quote {
     padding: 1.5rem 1.25rem;
   }
+
+  /* --- Note rêves personnels / universels --- */
+  .reves-note {
+    text-align: center;
+  }
+
+  .reves-note-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .reves-note-body {
+    grid-template-columns: 1fr;
+  }
+
+  .reves-note-col {
+    align-items: center;
+    text-align: center;
+  }
+
+  .reves-note-col p {
+    text-align: left;
+  }
+
+  .reves-note-list {
+    align-items: flex-start;
+    text-align: left;
+    width: 100%;
+    padding-left: 1rem;
+  }
+
+  /* --- Proposition (update note) --- */
+  .update-note-section {
+    text-align: center;
+  }
+
+  .update-note {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .update-note-text {
+    text-align: left;
+  }
 }
