@@ -696,6 +696,14 @@ body {
 .dialogue.ambre .dialogue-speaker  { color: var(--color-jazz); }
 .dialogue.ambre .dialogue-bubble   { background: rgba(52,211,153,0.1); border: 1px solid rgba(52,211,153,0.25); border-bottom-right-radius: 4px; }
 
+.stage-inline {
+  display: block;
+  font-style: italic;
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  margin: 0.2rem 0;
+}
+
 .dialogue.stage { justify-content: center; }
 .dialogue.stage .dialogue-bubble,
 .stage-direction {
