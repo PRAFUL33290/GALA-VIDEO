@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rêve en corps — Projet n°2 (plus simple)</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Nav link back */
+    .back-nav {
+      position: fixed;
+      top: 1.25rem;
+      left: 1.5rem;
+      z-index: 100;
+    }
+    .back-nav a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--color-soft-gold);
+      background: rgba(245, 197, 66, 0.08);
+      border: 1px solid rgba(245, 197, 66, 0.25);
+      padding: 0.45rem 1.1rem;
+      border-radius: 100px;
+      text-decoration: none;
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+    }
+    .back-nav a:hover {
+      background: rgba(245, 197, 66, 0.18);
+      box-shadow: 0 0 16px rgba(245, 197, 66, 0.25);
+    }
+
+    /* Stage note — direction scénique */
+    .stage-note {
+      font-size: 0.8rem;
+      font-style: italic;
+      color: var(--color-text-muted);
+      text-align: center;
+      padding: 0.5rem 1rem;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      margin-top: 0.5rem;
+    }
+
+    /* Final solo Emma */
+    .final-monologue {
+      background: rgba(244, 114, 182, 0.06);
+      border: 1px solid rgba(244, 114, 182, 0.2);
+      border-radius: var(--radius-card);
+      padding: 2rem 2.5rem;
+      text-align: center;
+      box-shadow: var(--shadow-soft);
+      animation: fadeInUp 0.9s ease both;
+    }
+
+    .final-monologue .final-speaker {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--color-emma);
+      margin-bottom: 0.75rem;
+    }
+
+    .final-monologue p {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      font-style: italic;
+      line-height: 2;
+      color: var(--color-text);
+    }
+
+    .final-monologue .final-tagline {
+      display: inline-block;
+      margin-top: 1.5rem;
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.1rem, 3vw, 1.5rem);
+      font-weight: 700;
+      font-style: normal;
+      background: linear-gradient(135deg, #ffffff, #fde68a, #93c5fd);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: 0.04em;
+    }
+
+    .final-pause {
+      display: block;
+      font-size: 0.78rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--color-text-muted);
+      margin: 1rem 0;
+    }
+
+    /* Version badge */
+    .version-badge {
+      display: inline-block;
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #93c5fd;
+      background: rgba(147, 197, 253, 0.1);
+      border: 1px solid rgba(147, 197, 253, 0.3);
+      padding: 0.35rem 1.1rem;
+      border-radius: 100px;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation retour -->
+  <nav class="back-nav">
+    <a href="index.html">← Projet n°1</a>
+  </nav>
+
+  <!-- ==============================
+       HEADER
+       ============================== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <span class="version-badge">✦ Projet n°2 — Plus simple ✦</span>
+      <h1 class="site-title">Rêve en corps</h1>
+      <p class="site-subtitle">Dialogues simplifiés — Version épurée</p>
+      <hr class="header-divider" />
+    </div>
+  </header>
+
+  <span class="section-separator"></span>
+
+  <!-- ==============================
+       VIDÉO 1 — BOLLYWOOD
+       ============================== -->
+  <section class="section bollywood-section">
+    <span class="section-label">Vidéo 1</span>
+    <h2 class="section-title">Bollywood</h2>
+    <span class="section-underline"></span>
+    <p class="scene-participants">À placer avant "Le rêve de métissage" — scène 7</p>
+
+    <div class="dialogues">
+
+      <div class="dialogue emma left">
+        <span class="dialogue-speaker">Emma</span>
+        <div class="dialogue-bubble">
+          « Je crois… que je rêve encore… »<br />
+          « Mais ici… je me sens bien. »
+        </div>
+      </div>
+
+      <div class="dialogue elina right">
+        <span class="dialogue-speaker">Élina</span>
+        <div class="dialogue-bubble">
+          « Moi c'est Élina. Je danse le Bollywood. »
+        </div>
+      </div>
+
+      <div class="dialogue nina right">
+        <span class="dialogue-speaker">Nina</span>
+        <div class="dialogue-bubble">
+          « Et moi c'est Nina. »
+        </div>
+      </div>
+
+      <div class="dialogue emma left">
+        <span class="dialogue-speaker">Emma</span>
+        <div class="dialogue-bubble">
+          « Vous avez l'air… heureuses. »
+        </div>
+      </div>
+
+      <div class="dialogue elina right">
+        <span class="dialogue-speaker">Élina</span>
+        <div class="dialogue-bubble">
+          « Parce qu'ici, on montre ce qu'on ressent. »
+        </div>
+      </div>
+
+      <div class="dialogue nina right">
+        <span class="dialogue-speaker">Nina</span>
+        <div class="dialogue-bubble">
+          « On danse ensemble, on partage tout. »
+        </div>
+      </div>
+
+      <div class="dialogue emma left">
+        <span class="dialogue-speaker">Emma</span>
+        <div class="dialogue-bubble">
+          « Moi… j'ose pas trop… »
+        </div>
+      </div>
+
+      <div class="dialogue elina right">
+        <span class="dialogue-speaker">Élina</span>
+        <div class="dialogue-bubble">
+          « Tu peux essayer. Ici, personne ne juge. »
+        </div>
+      </div>
+
+      <div class="dialogue nina right">
+        <span class="dialogue-speaker">Nina</span>
+        <div class="dialogue-bubble">
+          « Plus on est, plus c'est beau. »
+        </div>
+      </div>
+
+      <div class="dialogue emma left">
+        <span class="dialogue-speaker">Emma</span>
+        <div class="dialogue-bubble">
+          « Alors… je veux bien essayer. »
+        </div>
+      </div>
+
+      <div class="dialogue stage">
+        <div class="dialogue-bubble stage-direction">
+          Danse Bollywood — Emma commence à s'ouvrir (émotions)
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <span class="section-separator"></span>
+
+  <!-- ==============================
+       VIDÉO 2 — STREET & MODERN JAZZ (fusionnés)
+       ============================== -->
+  <section class="section street-section" style="--jazz-accent:#34d399;">
+    <span class="section-label">Vidéo 2</span>
+    <h2 class="section-title">Street &amp; Modern Jazz</h2>
+    <span class="section-underline" style="background:linear-gradient(90deg,#818cf8,#34d399);"></span>
+    <p class="scene-participants">Début de la transition Partie 2 — après "Eclipse" / avant "Un monde meilleur"</p>
+
+    <div class="dialogues">
+
+      <div class="dialogue jade right">
+        <span class="dialogue-speaker">Jade</span>
+        <div class="dialogue-bubble">
+          « Tu ressens… mais est-ce que tu es vraiment toi ? »
+        </div>
+      </div>
+
+      <div class="dialogue emma left">
+        <span class="dialogue-speaker">Emma</span>
+        <div class="dialogue-bubble">
+          « J'essaie… mais j'ai encore peur. »
+        </div>
+      </div>
+
+      <div class="dialogue jade right">
+        <span class="dialogue-speaker">Jade</span>
+        <div class="dialogue-bubble">
+          « Moi c'est Jade. Je danse le Hip-Hop. »<br />
+          « Ici, on apprend à être soi-même. »
+        </div>
+      </div>
+
+      <div class="dialogue emma left">
+        <span class="dialogue-speaker">Emma</span>
+        <div class="dialogue-bubble">
+          « Même quand on a peur ? »
+        </div>
+      </div>
+
+      <div class="dialogue jade right">
+        <span class="dialogue-speaker">Jade</span>
+        <div class="dialogue-bubble">
+          « Oui. On transforme ça en force. »
+        </div>
+      </div>
+
+      <div class="dialogue nina right">
+        <span class="dialogue-speaker">Nina</span>
+        <div class="dialogue-bubble">
+          « Ta peur peut devenir un mouvement. »
+        </div>
+      </div>
+
+      <div class="dialogue ambre right">
+        <span class="dialogue-speaker">Ambre</span>
+        <div class="dialogue-bubble">
+          « Et tu t'écoutes ? »
+        </div>
+      </div>
+
+      <div class="dialogue emma left">
+        <span class="dialogue-speaker">Emma</span>
+        <div class="dialogue-bubble">
+          « Je ressens… mais je comprends pas tout… »
+        </div>
+      </div>
+
+      <div class="dialogue ambre right">
+        <span class="dialogue-speaker">Ambre</span>
+        <div class="dialogue-bubble">
+          « Moi c'est Ambre. Je danse le Modern Jazz. »<br />
+          « Ici, on écoute ce qu'on a à l'intérieur. »
+        </div>
+      </div>
+
+      <div class="dialogue emma left">
+        <span class="dialogue-speaker">Emma</span>
+        <div class="dialogue-bubble">
+          « Même quand c'est compliqué ? »
+        </div>
+      </div>
+
+      <div class="dialogue ambre right">
+        <span class="dialogue-speaker">Ambre</span>
+        <div class="dialogue-bubble">
+          « Oui. Même ça. »
+        </div>
+      </div>
+
+      <div class="dialogue jade right">
+        <span class="dialogue-speaker">Jade</span>
+        <div class="dialogue-bubble">
+          « Tout peut devenir une force. »
+        </div>
+      </div>
+
+      <div class="dialogue elina right">
+        <span class="dialogue-speaker">Élina</span>
+        <div class="dialogue-bubble">
+          « Et quelque chose de beau. »
+        </div>
+      </div>
+
+      <div class="dialogue emma left">
+        <span class="dialogue-speaker">Emma</span>
+        <div class="dialogue-bubble">
+          « Alors… je peux être moi… vraiment ? »
+        </div>
+      </div>
+
+      <div class="dialogue tous">
+        <span class="dialogue-speaker">Tous</span>
+        <div class="dialogue-bubble">
+          « Oui. »
+        </div>
+      </div>
+
+      <div class="dialogue stage">
+        <div class="dialogue-bubble stage-direction">
+          Danse Street &amp; Modern Jazz — Emma gagne en confiance et s'accepte
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <span class="section-separator"></span>
+
+  <!-- ==============================
+       VIDÉO FINAL
+       ============================== -->
+  <section class="section concept-section">
+    <span class="section-label">Vidéo Finale (optionnelle)</span>
+    <h2 class="section-title">Final</h2>
+    <span class="section-underline"></span>
+    <p class="scene-participants">Après le final Bollywood ou toute fin du gala</p>
+
+    <div class="final-monologue fade-in">
+      <div class="final-speaker">Emma</div>
+      <p>
+        « J'ai compris… »<br />
+        « Je peux ressentir… »<br />
+        « Je peux être moi… »<br />
+        « Je peux m'écouter… »
+      </p>
+      <span class="final-pause">— pause —</span>
+      <p>
+        « Et tout ça… »<br />
+        « je peux le partager. »
+      </p>
+      <span class="final-tagline">« Rêve en corps. »</span>
+    </div>
+  </section>
+
+  <span class="section-separator"></span>
+
+  <footer style="text-align:center; padding: 3rem 2rem; color: var(--color-text-muted); font-size: 0.78rem; letter-spacing: 0.1em;">
+    Rêve en corps &mdash; Projet n°2 &mdash; Version plus simple
+  </footer>
+
+</body>
+</html>
